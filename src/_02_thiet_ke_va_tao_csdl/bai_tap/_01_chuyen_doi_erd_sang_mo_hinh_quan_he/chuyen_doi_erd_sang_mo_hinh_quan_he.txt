@@ -1,9 +1,5 @@
 Bước 1: Xác định các thực thể có trong mô hình ERD
-	- NhaCC
-	- DonDH
-	- VatTu
-	- PhieuNhap
-	- PhieuXuat
+	- NhaCC, DonDH, VatTu, PhieuNhap, PhieuXuat
 Bước 2: Xác định mối quan hệ giữa các thực thể
 	- NhaCC    1-n    DonDH
 	- DonDH    n-n    VatTu
@@ -28,9 +24,10 @@ Bước 4: Danh sách các bảng sau khi chuyển đổi xog
 +VatTu: - MaVTU
 	- TenVTU
 
-+PhieuXuat- SoPX
++PhieuXuat: 	- SoPX
 		- NgayXuat
 		- MaVTU
+
 +PhieuNhap:     - SoPN
 		- NgayNhap
 		- MaVTU
