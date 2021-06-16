@@ -1,10 +1,36 @@
 -- Luyện tập các hàm thông dụng trong SQL
-	-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
-    Select * from subject where credit = (select max(credit) from subject); 
+SELECT 
+    *
+FROM
+    subject
+WHERE
+    credit = (SELECT 
+            MAX(credit)
+        FROM
+            subject);
     
     -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
-    select s.SubID, s.SubName, s.Credit, s.`Status`, m.mark from subject s join mark m on m.subid = s.subid 
-		where m.mark = (select max(mark) from mark);
+SELECT 
+    s.subject_id, s.subject_name, s.Credit, s.`Status`, m.mark
+FROM
+    subject s
+        JOIN
+    mark m ON m.subject_id = s.subject_id
+WHERE
+    m.mark = (SELECT 
+            MAX(mark)
+        FROM
+            mark);
     
     -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
-    select s.studentid, s.studentname, count(m.mark) as so_mon_co_diem, AVG(mark) as diem_trung_binh from student s join mark m on s.studentid = m.studentid group by s.StudentName order by diem_trung_binh desc;
+SELECT 
+    s.student_id,
+    s.student_name,
+    COUNT(m.mark) AS so_mon_co_diem,
+    AVG(mark) AS diem_trung_binh
+FROM
+    student s
+        JOIN
+    mark m ON s.student_id = m.student_id
+GROUP BY s.student_name
+ORDER BY diem_trung_binh DESC;

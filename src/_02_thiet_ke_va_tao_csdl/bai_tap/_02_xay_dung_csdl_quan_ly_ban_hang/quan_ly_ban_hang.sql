@@ -6,7 +6,7 @@ create table customer(
     customer_age tinyint not null check (customer_age > 0)
 );
 
-create table orderr(
+create table `order`(
 	order_id int auto_increment primary key,
     order_date datetime not null,
     order_total_price int not null check(order_total_price > 0),
@@ -25,6 +25,6 @@ create table order_detail(
     product_id int,
     order_detail_quantity int,
     primary key(order_id, product_id),
-    foreign key(order_id) references orderr(order_id),
+    foreign key(order_id) references `order`(order_id),
     foreign key(product_id) references product(product_id)
 );
