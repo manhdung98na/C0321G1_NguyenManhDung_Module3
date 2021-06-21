@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo trang đọc truyện</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-size: 20px;
+        }
+        #menu_truyen{
+            display: inline-block;
+        }
+        #menu_truyen ul {
+            background-color: #8ad385;
+            width: 200px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #menu_truyen ul li{
+            line-height: 50px;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 1em;
+            position: relative;
+        }
+        #menu_truyen ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: block;
+        }
+
+        #menu_truyen ul li:hover{
+            background-color: #e8e8e8;
+            cursor: pointer;
+        }
+        #menu_truyen .sub_menu {
+            position: absolute;
+            width: 250px;
+            left: 200px;
+            top: 0;
+            display: none;
+            background-color: #e8e8e8;
+        }
+
+        #menu_truyen ul li:hover .sub_menu{
+            display: block;
+        }
+
+        #menu_truyen ul li:hover .sub_menu li:hover{
+            background-color: rgba(161,211,154,0.66);
+        }
+
+    </style>
 </head>
 <body>
-$END$
+
+<div id="menu_truyen">
+<ul>
+    <li><a>Anime</a>
+        <ul class="sub_menu">
+            <li><a href="https://i.imgur.com/SYbaw9j.png" target="_blank">One piece</a></li>
+            <li><a href="https://i.pinimg.com/originals/a0/e4/16/a0e416c3456f32ee898e79d573743436.jpg" target="_blank">Naruto</a></li>
+            <li><a href="https://media.s-bol.com/MJYR0Zqyv6kO/800x1200.jpg" target="_blank">One punchman</a></li>
+        </ul>
+    </li>
+    <li><a>Tiểu Thuyết</a>
+        <ul class="sub_menu">
+            <li><a href="https://chiasemoi.com/wp-content/uploads/2018/01/hai-so-phan.jpg" target="_blank">Hai số phận</a></li>
+            <li><a href="https://newshop.vn/public/uploads/products/16542/ong-gia-va-bien-ca.jpg" target="_blank">Ông già và biển cả</a></li>
+            <li><a href="https://upload.wikimedia.org/wikipedia/vi/2/28/Norwegian-wood_poster.jpg" target="_blank">Rừng Na-uy</a></li>
+        </ul>
+    </li>
+    <li><a>Truyện cổ tích</a>
+        <ul class="sub_menu">
+            <li><a href="https://truyencotich.vn/truyen-co-tich/co-tich-viet-nam/truyen-thuyet-thanh-giong.html" target="_blank">Thánh gióng</a></li>
+            <li><a href="https://truyencotich.vn/truyen-co-tich/co-tich-viet-nam/su-tich-chu-cuoi-cung-trang.html" target="_blank">Chú cuội</a></li>
+            <li><a href="https://truyencotich.top/doc-truyen/cay-but-than">Cây bút thần</a></li>
+            <li><a href="https://doctruyencotich.vn/truyen-co-tich-viet-nam/truyen-co-tich-tam-cam-ban-goc.html" target="_blank">Tấm cám</a></li>
+        </ul>
+    </li>
+    <li><a>Truyện ngụ ngôn</a>
+        <ul class="sub_menu">
+            <li><a href="https://truyencotich.vn/truyen-co-tich/co-tich-viet-nam/tri-khon-cua-ta-day.html" target="_blank">Trí khôn của ta đây</a></li>
+            <li><a href="https://truyencotich.vn/truyen-dan-gian/rua-va-tho.html" target="_blank">Rùa và thỏ</a></li>
+            <li><a href="https://thegioicotich.vn/thay-boi-xem-voi/" target="_blank">Thầy bói xem voi</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
 </body>
 </html>
