@@ -33,6 +33,30 @@
         .footer {
             grid-area: footer;
         }
+
+        @media only screen and (max-width: 425px) {
+            .left-content {
+                display: none;
+            }
+
+            .container {
+                display: grid;
+                grid-template-areas: 'header header'
+                                 'header-link header-link'
+                                 'right-content right-content'
+                                 'footer footer';
+            }
+
+            .header-link {
+                height: 25px;
+                line-height: 25px;
+            }
+
+            .header-link a {
+                width: 50%;
+                font-size: 70%;
+            }
+        }
     </style>
 </head>
 <body>

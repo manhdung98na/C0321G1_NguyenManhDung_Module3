@@ -27,6 +27,7 @@
 
 .header-link a:hover {
     color: #63a2b9;
+    cursor: pointer;
 }
 
 .left-content {
