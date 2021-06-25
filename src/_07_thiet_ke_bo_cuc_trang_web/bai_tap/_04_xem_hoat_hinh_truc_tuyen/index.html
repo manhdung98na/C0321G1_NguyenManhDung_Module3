@@ -76,23 +76,24 @@
     <div class="left-content">
         <ul class="list-movie">
             <li>
-                <a href=""><img
-                        src="https://gamek.mediacdn.vn/133514250583805952/2021/6/24/anh-2-16245125227512055130039.png"></a>
+                <img onclick="changeLink('https://www.youtube.com/embed/0yOSqdov7kQ')"
+                     src="https://gamek.mediacdn.vn/133514250583805952/2021/6/24/anh-2-16245125227512055130039.png"></a>
                 <p>One piece tập 123</p>
             </li>
-            <li><a href=""><img
-                    src="https://gamek.mediacdn.vn/133514250583805952/2021/6/24/anh-4-1624512522770684362545.jpg"/></a>
+            <li><img onclick="changeLink('https://www.youtube.com/embed/A6LkU0M1pjs')"
+                     src="https://gamek.mediacdn.vn/133514250583805952/2021/6/24/anh-4-1624512522770684362545.jpg"/></a>
                 <p>One piece tập 456</p>
             </li>
-            <li><a href=""><img
-                    src="https://gamek.mediacdn.vn/133514250583805952/2021/6/23/photo-1-1624440568852722075088.jpg"/></a>
-                <p>One piece tập 789</p>
+            <li><img onclick="changeLink('https://www.youtube.com/embed/s6dPPdfw8Tc')"
+                     src="https://gamek.mediacdn.vn/133514250583805952/2021/6/23/photo-1-1624440568852722075088.jpg"/></a>
+                <p>One piece tập 892</p>
             </li>
         </ul>
     </div>
     <div class="right-content">
         <div class="movie">
             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    id="video-embed"
                     allowfullscreen frameborder="0"
                     height="90%" src="https://www.youtube.com/embed/bDnAqG3c6F8"
                     title="YouTube video player"
@@ -103,4 +104,9 @@
     <div class="footer"><b>© 2017 - Thiết kế web bởi trang hoathinhvn.net</b></div>
 </div>
 </body>
+<script>
+    function changeLink(src) {
+        document.getElementById('video-embed').setAttribute('src', src);
+    }
+</script>
 </html>

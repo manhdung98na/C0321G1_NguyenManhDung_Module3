@@ -73,4 +73,5 @@
 .list-movie li img:hover {
     border: 2px solid;
     box-shadow: 2px 2px 2px #8a8a8a;
+    cursor: pointer;
 }
