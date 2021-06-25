@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 50px;
+    background-color: #8a8a8a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: inline-flex;
+}
+
+.menuLeft {
+    background-color: #cfcfcf;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.menuRight {
+    background-color: #cfcfcf;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.content {
+    background-color: whitesmoke;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.footer {
+    background-color: #8a8a8a;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    padding-right: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    height: 100%;
+}
+
+li {
+    width: 70px;
+    line-height: 50px;
+    list-style-type: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #e7e7e7;
+}
+
+.header .menu-ngang ul li:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.header .menu-ngang ul li:hover .drop {
+    display: block;
+}
+
+/*Login*/
+.header span {
+    display: inline-flex;
+    position: absolute;
+    right: 30px;
+    height: 50px;
+    width: 70px;
+    text-align: center;
+    line-height: 50px;
+    color: #e7e7e7;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.header .menu-ngang ul li ul {
+    display: none;
+}
+
+.header .menu-ngang ul li ul li {
+    background-color: #c0c0c0;
+    width: 120px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.menuLeft a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 5%;
+    padding: 16px 0 0 8px;
+}
+
+.menuLeft a:hover {
+    background-color: #afafaf;
+}
+
+.dropdown {
+    display: none;
+    background-color: #8a8a8a;
+    text-align: center;
+}
+
+.dropdown span {
+    text-align: center;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 8px;
+}
+
+.dropdown_menu {
+    background-color: #a8a8a8;
+    left: 0;
+}
+
+.dropdown_menu:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.noidung_dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background-color: #afafaf;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.noidung_dropdown li {
+    display: block;
+    height: 50px;
+}
+
+.drop li {
+    background-color: #8a8a8a;
+}
+
+.dropdown:hover .noidung_dropdown {
+    display: block;
+}
+
+.noidung_dropdown li:hover {
+    background-color: black;
+}
+
+.noidung_dropdown li:hover .drop {
+    display: block;
+}
+
+.noidung_dropdown .drop {
+    display: none;
+}
+
+.noidung_dropdown .drop:hover li {
+    display: block;
+}
+
+.noidung_dropdown .drop li:hover {
+    background-color: black;
+}

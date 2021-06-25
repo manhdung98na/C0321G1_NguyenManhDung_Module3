@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo layout RWD</title>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'header header header'
+                                  'menuLeft content menuRight'
+                                  'footer footer footer';
+            grid-template-columns: 15% 70% 15%;
+            text-align: center;
+        }
+
+        .header {
+            grid-area: header
+        }
+
+        .menuLeft {
+            grid-area: menuLeft
+        }
+
+        .menuRight {
+            grid-area: menuRight
+        }
+
+        .content {
+            grid-area: content
+        }
+
+        .footer {
+            grid-area: footer
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            .dropdown {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .menuRight, .menuLeft {
+                display: none;
+            }
+
+            .header img {
+                display: none;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .dropdown {
+                display: inline-block;
+            }
+
+            .menu-ngang {
+                display: none;
+            }
+
+            .container {
+                display: grid;
+                grid-template-areas: 'header'
+                                  'content'
+                                  'footer';
+                grid-template-columns: 100%;
+                text-align: center;
+            }
+
+            .header {
+                height: 35px;
+            }
+
+            .footer {
+                height: 7%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="dropdown">
+            <span class="dropdown_menu">MENU</span>
+            <div class="noidung_dropdown">
+                <ul>
+                    <li><a href="">Home</a>
+                        <ul class="drop">
+                            <li><a href="">Link 1</a></li>
+                            <li><a href="">Link 111</a></li>
+                            <li><a href="">Link11323</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">About</a>
+                        <ul class="drop">
+                            <li><a href="">Information</a></li>
+                            <li><a href="">Policy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Projects</a>
+                        <ul class="drop">
+                            <li><a href="">Codegym</a></li>
+                            <li><a href="">Axon Active</a></li>
+                            <li><a href="">Project thứ 3</a></li>
+                            <li><a href="">Projectttt</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contacts</a>
+                        <ul class="drop">
+                            <li><a href="">Email</a></li>
+                            <li><a href="">Phone Number</a></li>
+                            <li><a href="">Address</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img alt="LOGO" src=""/>
+        <div class="menu-ngang">
+            <ul>
+                <li><a href="">Home</a>
+                    <ul class="drop">
+                        <li><a href="">Link 1</a></li>
+                        <li><a href="">Link 111</a></li>
+                        <li><a href="">Link11323</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a>
+                    <ul class="drop">
+                        <li><a href="">Information</a></li>
+                        <li><a href="">Policy</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Projects</a>
+                    <ul class="drop">
+                        <li><a href="">Codegym</a></li>
+                        <li><a href="">Axon Active</a></li>
+                        <li><a href="">Project thứ 3</a></li>
+                        <li><a href="">Projectttt</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contacts</a>
+                    <ul class="drop">
+                        <li><a href="">Email</a></li>
+                        <li><a href="">Phone Number</a></li>
+                        <li><a href="">Address</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <span>
+            <label>Login</label>
+        </span>
+    </div>
+
+    <div class="menuLeft">
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+    </div>
+
+    <div class="content">
+        <iframe height="100%" src="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_tr%C3%ACnh_m%C3%A1y_t%C3%ADnh"
+                width="100%"></iframe>
+    </div>
+
+    <div class="menuRight"></div>
+
+    <div class="footer">
+        <span style="text-align: center; line-height: 50px">Footer</span>
+    </div>
+</div>
+</body>
+</html>
