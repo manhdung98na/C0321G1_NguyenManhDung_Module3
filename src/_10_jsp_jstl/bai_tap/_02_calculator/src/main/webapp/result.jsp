@@ -13,15 +13,16 @@
     </style>
 </head>
 <body>
-<c:if test="${not empty requestScope.errorMessage}">
-<c:out value="${requestScope.errorMessage}"/>
+<c:if test="${not empty requestScope['errorMessage']}">
+    <c:out value="${requestScope['errorMessage']}"/>
 </c:if>
-<c:if test="${empty requestScope.errorMessage}">
-    <h3>RESULT</h3><hr>
-    <c:out value="${requestScope.firstOperand}"/>
-    <c:out value="${requestScope.operator}"/>
-    <c:out value="${requestScope.secondOperand}"/> =
-    <c:out value="${requestScope.result}"/>
+<c:if test="${empty requestScope['errorMessage']}">
+    <h3>RESULT</h3>
+    <hr>
+    <c:out value="${requestScope['firstOperand']}"/>
+    <c:out value="${requestScope['operator']}"/>
+    <c:out value="${requestScope['secondOperand']}"/> =
+    <c:out value="${requestScope['result']}"/>
 </c:if>
 </body>
 </html>
