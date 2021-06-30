@@ -55,10 +55,11 @@
                     <form class="search-form  d-flex" action="/users" method="post">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="nameSearch" placeholder="Tìm kiếm theo tên"
-                                   aria-label="Tìm kiếm theo tên" aria-describedby="button-addon2">
+                                   aria-label="Tìm kiếm theo tên" aria-describedby="button-addon2"
+                                   onchange="activeBtnSearch()">
                             <div class="input-group-prepend">
                                 <input hidden name="action" value="search">
-                                <button type="submit" class="btn btn-secondary" id="button-addon2">
+                                <button type="submit" class="btn btn-secondary" id="button-addon2" disabled>
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
@@ -179,6 +180,11 @@
         $('.toast').toast('show');
         $('.toast').fadeOut(3000);
     });
+</script>
+<script>
+    function activeBtnSearch() {
+        document.getElementById("button-addon2").removeAttribute("disabled");
+    }
 </script>
 </body>
 </html>
