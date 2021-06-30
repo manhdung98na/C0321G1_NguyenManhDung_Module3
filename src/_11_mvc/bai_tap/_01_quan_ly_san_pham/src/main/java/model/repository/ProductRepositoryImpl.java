@@ -40,7 +40,7 @@ public class ProductRepositoryImpl implements ProductRepository{
         List<Product> list = new ArrayList<>();
         Set<Integer> set = products.keySet();
         for (Integer key : set) {
-            if (products.get(key).getName().contains(name)){
+            if (products.get(key).getName().toLowerCase().contains(name)){
                 list.add(products.get(key));
             }
         }

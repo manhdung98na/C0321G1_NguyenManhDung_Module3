@@ -23,19 +23,34 @@
     <c:if test="${not empty productList}">
         <div class="card mt-4">
             <div class="card-header">
-                <h2 style="color: #c41f00">TRANG WEB QUẢN LÝ SẢN PHẨM</h2>
+                <h3 style="color: #c41f00">TRANG WEB QUẢN LÝ SẢN PHẨM</h3>
             </div>
             <div class="card-body">
-                <a href="/product?action=create" type="button" class="btn btn-success card-title">
-                    Create New Product
-                </a>
-                <h5 class="card-title">Danh sách sản phẩm</h5>
+                <div >
+                    <div>
+                        <div class="search-box">
+                            <form class="search-form  d-flex" action="/product" method="post">
+                                <input hidden name="action" value="search">
+                                <input class="form-control" placeholder="Tìm kiếm theo tên" type="text" name="nameSearch">
+                                <button type="submit" class="btn btn-success card-title ml-2">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-inline">
+                <h5 class="card-title d-inline-block">Danh sách sản phẩm</h5>
+                <a href="/product?action=create" type="button" class="btn btn-success card-title float-right">
+                    Create
+                </a></div>
                 <table class="table align-middle table-striped table-bordered mt-4">
                     <thead class="p-0 table-dark w-100">
                     <tr class="">
                         <th class=" text-center">ID</th>
                         <th class=" text-center">Tên sản phẩm</th>
-                        <th class=" text-center">Giá</th>
+                        <th class=" text-center">Giá (VND)</th>
                         <th class=" text-center">Miêu tả</th>
                         <th class=" text-center">Hãng sản xuất</th>
                         <th class=" text-center ">Action</th>
@@ -56,7 +71,8 @@
                                    role="button">Edit</a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                        data-target="#modalDel" onclick="sendInfoToDelete(${product.id}, '${product.name}')">
+                                        data-target="#modalDel"
+                                        onclick="sendInfoToDelete(${product.id}, '${product.name}')">
                                     Delete
                                 </button>
 
@@ -78,7 +94,8 @@
                                                 <div class="modal-body">
                                                     <div class="container-fluid">
                                                         Xác nhận xoá?
-                                                        <input id="nameConfirm" value="" style="border: none; outline:none; color: red" readonly>
+                                                        <input id="nameConfirm" value=""
+                                                               style="border: none; outline:none; color: red" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">

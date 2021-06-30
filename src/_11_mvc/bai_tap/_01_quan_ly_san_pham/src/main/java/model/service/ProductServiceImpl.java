@@ -41,6 +41,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> searchByName(String name) {
-        return null;
+        return repository.searchByName(name);
     }
 }

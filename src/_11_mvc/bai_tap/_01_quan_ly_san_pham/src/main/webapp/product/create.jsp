@@ -17,19 +17,23 @@
 </head>
 <body>
 <div class="container">
-    <form method="post" action="/product" class="text-center">
-        <c:if test="${not empty requestScope['errorMessage']}">
+    <c:if test="${not empty requestScope['errorId']}">
+        <form method="post" action="/product" class="text-center">
+            <input hidden name="action" value="home">
             <div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
-                <input hidden name="action" value="create">
-                <strong>Tạo mới thất bại!</strong> ID '<span
-                    style="color: red; font-weight: bold; font-style: italic">${requestScope['id']}</span>' đã tồn tại.
-                <p>${requestScope['errorMessage']}</p>
-                <button type="submit" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true" style="text-decoration: none; font-size: 20px">x</span>
+                <strong>Tạo mới thất bại!</strong>
+                <p>ID '
+                    <span style="color: red; font-weight: bold; font-style: italic">${requestScope['errorId']}</span>'
+                đã tồn tại.</p>
+                <button type="submit" class="close" aria-label="Close">
+                    <span style="text-decoration: none; font-size: 20px">x</span>
                 </button>
             </div>
-        </c:if>
-        <c:if test="${empty requestScope['errorMessage']}">
+
+        </form>
+    </c:if>
+    <c:if test="${empty requestScope['errorId']}">
+        <form method="post" action="/product" class="text-center">
             <input hidden name="action" value="create">
             <h2 class="m-3">Thêm mới sản phẩm</h2>
             <table class="table table-borderless">
@@ -88,8 +92,8 @@
             </table>
             <a href="/product" type="button" class="btn btn-secondary">Back</a>
             <button type="submit" class="btn btn-success">Submit</button>
-        </c:if>
-    </form>
+        </form>
+    </c:if>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
