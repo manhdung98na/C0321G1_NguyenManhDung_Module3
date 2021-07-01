@@ -56,7 +56,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="nameSearch" placeholder="Tìm kiếm theo tên"
                                    aria-label="Tìm kiếm theo tên" aria-describedby="button-addon2"
-                                   onchange="activeBtnSearch()">
+                                   onkeypress="activeBtnSearch()">
                             <div class="input-group-prepend">
                                 <input hidden name="action" value="search">
                                 <button type="submit" class="btn btn-secondary" id="button-addon2" disabled>
