@@ -132,7 +132,6 @@ public class UserServlet extends HttpServlet {
         try {
             services.insertUserStore(newUser);
             request.setAttribute("createSuccess", name);
-            request.setAttribute("action", "");
             listUserByProcedure(request, response);
         } catch (Exception e) {
             request.setAttribute("error", e.getMessage());
