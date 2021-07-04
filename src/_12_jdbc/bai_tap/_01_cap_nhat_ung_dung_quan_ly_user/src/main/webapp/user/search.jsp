@@ -33,7 +33,7 @@
             <div class="d-inline">
                 <h5 class="card-title d-inline-block">Danh sách người dùng</h5>
             </div>
-            <table class="table align-middle table-striped table-bordered mt-4" id="tableUser">
+            <table class="table align-middle table-striped table-bordered mt-4" id="">
                 <thead class="p-0 table-dark w-100">
                 <tr class="">
                     <th class=" text-center">ID</th>
@@ -81,7 +81,13 @@
         $('#tableUser').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
-            "pageLength": 5
+            "pageLength": 5,
+            "aoColumns": [
+                {"bSortable": false},
+                {"bSortable": false},
+                {"bSortable": false},
+                {"bSortable": false},
+            ]
         });
     });
 </script>
