@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="giai_phuong_trinh_bac2_lib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/giai_phuong_trinh_bac2_lib_jar</output-path>
+    <root id="archive" name="giai_phuong_trinh_bac2_lib.jar">
+      <element id="module-output" name="giai_phuong_trinh_bac2_lib" />
+    </root>
+  </artifact>
+</component>
